@@ -1,0 +1,1852 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AIC_Config_Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="AIC_Config_ModelStoreContainer">
+          <EntitySet Name="AIC_001_INSTITUICAO" EntityType="AIC_Config_Model.Store.AIC_001_INSTITUICAO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AIC_002_PONTO_VENDA" EntityType="AIC_Config_Model.Store.AIC_002_PONTO_VENDA" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AIC_003_GRUPO_VENDA" EntityType="AIC_Config_Model.Store.AIC_003_GRUPO_VENDA" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AIC_004_GRUPO" EntityType="AIC_Config_Model.Store.AIC_004_GRUPO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AIC_005_PROD_CAMPANHA" EntityType="AIC_Config_Model.Store.AIC_005_PROD_CAMPANHA" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AIC_006_PROD_PARAMETRO" EntityType="AIC_Config_Model.Store.AIC_006_PROD_PARAMETRO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AIC_007_FUNC_INSTITUICAO" EntityType="AIC_Config_Model.Store.AIC_007_FUNC_INSTITUICAO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BatchTag" EntityType="AIC_Config_Model.Store.BatchTag" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Cache" EntityType="AIC_Config_Model.Store.Cache" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CacheOwner" EntityType="AIC_Config_Model.Store.CacheOwner" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CacheStorage" EntityType="AIC_Config_Model.Store.CacheStorage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Channels" EntityType="AIC_Config_Model.Store.Channels" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ChannelStepFields" EntityType="AIC_Config_Model.Store.ChannelStepFields" store:Type="Tables" store:Schema="dbo" store:Name="ChannelStepFields">
+            <DefiningQuery>SELECT 
+      [ChannelStepFields].[ChannelStepID] AS [ChannelStepID], 
+      [ChannelStepFields].[FieldID] AS [FieldID]
+      FROM [dbo].[ChannelStepFields] AS [ChannelStepFields]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ChannelSteps" EntityType="AIC_Config_Model.Store.ChannelSteps" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Fields" EntityType="AIC_Config_Model.Store.Fields" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FlowRules" EntityType="AIC_Config_Model.Store.FlowRules" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Flows" EntityType="AIC_Config_Model.Store.Flows" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="History" EntityType="AIC_Config_Model.Store.History" store:Type="Tables" store:Schema="dbo" store:Name="History">
+            <DefiningQuery>SELECT 
+      [History].[SourceID] AS [SourceID], 
+      [History].[Created] AS [Created], 
+      [History].[Modified] AS [Modified], 
+      [History].[Owner] AS [Owner]
+      FROM [dbo].[History] AS [History]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Jobs" EntityType="AIC_Config_Model.Store.Jobs" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="JobStatistics" EntityType="AIC_Config_Model.Store.JobStatistics" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Legacies" EntityType="AIC_Config_Model.Store.Legacies" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LegacyCodes" EntityType="AIC_Config_Model.Store.LegacyCodes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LegacyValues" EntityType="AIC_Config_Model.Store.LegacyValues" store:Type="Tables" store:Schema="dbo" store:Name="LegacyValues">
+            <DefiningQuery>SELECT 
+      [LegacyValues].[LegacyCodeID] AS [LegacyCodeID], 
+      [LegacyValues].[SourceID] AS [SourceID], 
+      [LegacyValues].[Value] AS [Value]
+      FROM [dbo].[LegacyValues] AS [LegacyValues]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="MediaSet" EntityType="AIC_Config_Model.Store.MediaSet" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductMedia" EntityType="AIC_Config_Model.Store.ProductMedia" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Products" EntityType="AIC_Config_Model.Store.Products" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Rules" EntityType="AIC_Config_Model.Store.Rules" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Steps" EntityType="AIC_Config_Model.Store.Steps" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="AIC_Config_Model.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="AIC002F1" Association="AIC_Config_Model.Store.AIC002F1">
+            <End Role="AIC_001_INSTITUICAO" EntitySet="AIC_001_INSTITUICAO" />
+            <End Role="AIC_002_PONTO_VENDA" EntitySet="AIC_002_PONTO_VENDA" />
+          </AssociationSet>
+          <AssociationSet Name="AIC003F1" Association="AIC_Config_Model.Store.AIC003F1">
+            <End Role="AIC_004_GRUPO" EntitySet="AIC_004_GRUPO" />
+            <End Role="AIC_003_GRUPO_VENDA" EntitySet="AIC_003_GRUPO_VENDA" />
+          </AssociationSet>
+          <AssociationSet Name="AIC003F2" Association="AIC_Config_Model.Store.AIC003F2">
+            <End Role="AIC_002_PONTO_VENDA" EntitySet="AIC_002_PONTO_VENDA" />
+            <End Role="AIC_003_GRUPO_VENDA" EntitySet="AIC_003_GRUPO_VENDA" />
+          </AssociationSet>
+          <AssociationSet Name="AIC005F1" Association="AIC_Config_Model.Store.AIC005F1">
+            <End Role="AIC_006_PROD_PARAMETRO" EntitySet="AIC_006_PROD_PARAMETRO" />
+            <End Role="AIC_005_PROD_CAMPANHA" EntitySet="AIC_005_PROD_CAMPANHA" />
+          </AssociationSet>
+          <AssociationSet Name="AIC005F2" Association="AIC_Config_Model.Store.AIC005F2">
+            <End Role="AIC_004_GRUPO" EntitySet="AIC_004_GRUPO" />
+            <End Role="AIC_005_PROD_CAMPANHA" EntitySet="AIC_005_PROD_CAMPANHA" />
+          </AssociationSet>
+          <AssociationSet Name="AIC006F1" Association="AIC_Config_Model.Store.AIC006F1">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="AIC_006_PROD_PARAMETRO" EntitySet="AIC_006_PROD_PARAMETRO" />
+          </AssociationSet>
+          <AssociationSet Name="AIC006F2" Association="AIC_Config_Model.Store.AIC006F2">
+            <End Role="Channels" EntitySet="Channels" />
+            <End Role="AIC_006_PROD_PARAMETRO" EntitySet="AIC_006_PROD_PARAMETRO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cache_CacheOwner" Association="AIC_Config_Model.Store.FK_Cache_CacheOwner">
+            <End Role="CacheOwner" EntitySet="CacheOwner" />
+            <End Role="Cache" EntitySet="Cache" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CacheStorage_Cache" Association="AIC_Config_Model.Store.FK_CacheStorage_Cache">
+            <End Role="Cache" EntitySet="Cache" />
+            <End Role="CacheStorage" EntitySet="CacheStorage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChannelStepFields_ChannelSteps" Association="AIC_Config_Model.Store.FK_ChannelStepFields_ChannelSteps">
+            <End Role="ChannelSteps" EntitySet="ChannelSteps" />
+            <End Role="ChannelStepFields" EntitySet="ChannelStepFields" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChannelStepFields_Fields" Association="AIC_Config_Model.Store.FK_ChannelStepFields_Fields">
+            <End Role="Fields" EntitySet="Fields" />
+            <End Role="ChannelStepFields" EntitySet="ChannelStepFields" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChannelSteps_Channels" Association="AIC_Config_Model.Store.FK_ChannelSteps_Channels">
+            <End Role="Channels" EntitySet="Channels" />
+            <End Role="ChannelSteps" EntitySet="ChannelSteps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChannelSteps_Steps" Association="AIC_Config_Model.Store.FK_ChannelSteps_Steps">
+            <End Role="Steps" EntitySet="Steps" />
+            <End Role="ChannelSteps" EntitySet="ChannelSteps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FlowRules_Flows" Association="AIC_Config_Model.Store.FK_FlowRules_Flows">
+            <End Role="Flows" EntitySet="Flows" />
+            <End Role="FlowRules" EntitySet="FlowRules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FlowRules_Flows1" Association="AIC_Config_Model.Store.FK_FlowRules_Flows1">
+            <End Role="Flows" EntitySet="Flows" />
+            <End Role="FlowRules" EntitySet="FlowRules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FlowRules_Rules" Association="AIC_Config_Model.Store.FK_FlowRules_Rules">
+            <End Role="Rules" EntitySet="Rules" />
+            <End Role="FlowRules" EntitySet="FlowRules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FlowRules_Rules1" Association="AIC_Config_Model.Store.FK_FlowRules_Rules1">
+            <End Role="Rules" EntitySet="Rules" />
+            <End Role="FlowRules" EntitySet="FlowRules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Flows_Products" Association="AIC_Config_Model.Store.FK_Flows_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="Flows" EntitySet="Flows" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LegacyCodes_Legacies1" Association="AIC_Config_Model.Store.FK_LegacyCodes_Legacies1">
+            <End Role="Legacies" EntitySet="Legacies" />
+            <End Role="LegacyCodes" EntitySet="LegacyCodes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LegacyValues_LegacyCodes" Association="AIC_Config_Model.Store.FK_LegacyValues_LegacyCodes">
+            <End Role="LegacyCodes" EntitySet="LegacyCodes" />
+            <End Role="LegacyValues" EntitySet="LegacyValues" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rules_Products" Association="AIC_Config_Model.Store.FK_Rules_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="Rules" EntitySet="Rules" />
+          </AssociationSet>
+          <AssociationSet Name="RefAIC_001_INSTITUICAO461" Association="AIC_Config_Model.Store.RefAIC_001_INSTITUICAO461">
+            <End Role="AIC_001_INSTITUICAO" EntitySet="AIC_001_INSTITUICAO" />
+            <End Role="AIC_007_FUNC_INSTITUICAO" EntitySet="AIC_007_FUNC_INSTITUICAO" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AIC_001_INSTITUICAO">
+          <Key>
+            <PropertyRef Name="COD_INSTITUICAO" />
+          </Key>
+          <Property Name="COD_INSTITUICAO" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NOM_INSTITUICAO" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="DES_INSTITUICAO" Type="varchar" MaxLength="60" />
+          <Property Name="STA_ATIVO" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AIC_002_PONTO_VENDA">
+          <Key>
+            <PropertyRef Name="COD_PONTO_VENDA" />
+            <PropertyRef Name="COD_INSTITUICAO" />
+          </Key>
+          <Property Name="COD_PONTO_VENDA" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="COD_INSTITUICAO" Type="smallint" Nullable="false" />
+          <Property Name="NOM_PONTO_VENDA" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="DES_PONTO_VENDA" Type="varchar" MaxLength="100" />
+          <Property Name="STA_ATIVO" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AIC_003_GRUPO_VENDA">
+          <Key>
+            <PropertyRef Name="COD_PONTO_VENDA" />
+            <PropertyRef Name="COD_INSTITUICAO" />
+            <PropertyRef Name="COD_GRUPO" />
+          </Key>
+          <Property Name="COD_PONTO_VENDA" Type="smallint" Nullable="false" />
+          <Property Name="COD_INSTITUICAO" Type="smallint" Nullable="false" />
+          <Property Name="COD_GRUPO" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AIC_004_GRUPO">
+          <Key>
+            <PropertyRef Name="COD_GRUPO" />
+          </Key>
+          <Property Name="COD_GRUPO" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NOM_GRUPO" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="DES_GRUPO" Type="varchar" MaxLength="100" />
+          <Property Name="STA_ATIVO" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AIC_005_PROD_CAMPANHA">
+          <Key>
+            <PropertyRef Name="COD_GRUPO" />
+            <PropertyRef Name="ChannelID" />
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="SEQ_PROD_PARAMETRO" />
+          </Key>
+          <Property Name="COD_GRUPO" Type="smallint" Nullable="false" />
+          <Property Name="ChannelID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProductID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SEQ_PROD_PARAMETRO" Type="smallint" Nullable="false" />
+          <Property Name="NOM_CAMPANHA_VENDA" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="DES_CAMPANHA_VENDA" Type="varchar" Nullable="false" MaxLength="60" />
+          <Property Name="DTA_INI_VIGENCIA" Type="date" Nullable="false" />
+          <Property Name="DTA_FIM_VIGENCIA" Type="date" />
+        </EntityType>
+        <EntityType Name="AIC_006_PROD_PARAMETRO">
+          <Key>
+            <PropertyRef Name="ChannelID" />
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="SEQ_PROD_PARAMETRO" />
+          </Key>
+          <Property Name="ChannelID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProductID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SEQ_PROD_PARAMETRO" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="XML_PROD_PARAMETRO" Type="xml" Nullable="false" />
+          <Property Name="STA_PADRAO" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AIC_007_FUNC_INSTITUICAO">
+          <Key>
+            <PropertyRef Name="COD_INSTITUICAO" />
+            <PropertyRef Name="COD_MATRICULA" />
+          </Key>
+          <Property Name="COD_INSTITUICAO" Type="smallint" Nullable="false" />
+          <Property Name="COD_MATRICULA" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="STA_ATIVO" Type="bit" Nullable="false" />
+          <Property Name="NOM_FUNCIONARIO" Type="varchar" MaxLength="50" />
+          <Property Name="COD_MATR_PARCEIRO" Type="char" MaxLength="10" />
+          <Property Name="SIG_UF_FUNCIONARIO" Type="char" MaxLength="2" />
+          <Property Name="DTA_CADASTRO" Type="date" />
+        </EntityType>
+        <EntityType Name="BatchTag">
+          <Key>
+            <PropertyRef Name="BatchTagId" />
+          </Key>
+          <Property Name="BatchTagId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="Position" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="TypeRecord" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="Value" Type="varchar" MaxLength="200" />
+          <Property Name="OrderVal" Type="int" />
+          <Property Name="ProductID" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cache">
+          <Key>
+            <PropertyRef Name="CacheID" />
+          </Key>
+          <Property Name="CacheID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CacheOwnerID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CacheName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CacheOwner">
+          <Key>
+            <PropertyRef Name="CacheOwnerID" />
+          </Key>
+          <Property Name="CacheOwnerID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="OwnerName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CacheStorage">
+          <Key>
+            <PropertyRef Name="CacheStorageID" />
+          </Key>
+          <Property Name="CacheStorageID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CacheID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Method" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Enabled" Type="bit" Nullable="false" />
+          <Property Name="Timer" Type="smallint" Nullable="false" />
+          <Property Name="Region" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Channels">
+          <Key>
+            <PropertyRef Name="ChannelID" />
+          </Key>
+          <Property Name="ChannelID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ChannelName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'AIC_Config.dbo.ChannelStepFields' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="ChannelStepFields">
+          <Key>
+            <PropertyRef Name="ChannelStepID" />
+            <PropertyRef Name="FieldID" />
+          </Key>
+          <Property Name="ChannelStepID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FieldID" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ChannelSteps">
+          <Key>
+            <PropertyRef Name="ChannelStepID" />
+          </Key>
+          <Property Name="ChannelStepID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ChannelID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="StepID" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Fields">
+          <Key>
+            <PropertyRef Name="FieldID" />
+          </Key>
+          <Property Name="FieldID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FieldName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FieldSystemName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FieldStatus" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FlowRules">
+          <Key>
+            <PropertyRef Name="FlowRuleID" />
+          </Key>
+          <Property Name="FlowID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RuleID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FlowRuleID" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Flows">
+          <Key>
+            <PropertyRef Name="FlowID" />
+          </Key>
+          <Property Name="FlowID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProductID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ChannelStepID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="StepNumber" Type="int" />
+          <Property Name="Fails" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'AIC_Config.dbo.History' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="History">
+          <Key>
+            <PropertyRef Name="SourceID" />
+            <PropertyRef Name="Created" />
+            <PropertyRef Name="Modified" />
+            <PropertyRef Name="Owner" />
+          </Key>
+          <Property Name="SourceID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Created" Type="date" Nullable="false" />
+          <Property Name="Modified" Type="date" Nullable="false" />
+          <Property Name="Owner" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Jobs">
+          <Key>
+            <PropertyRef Name="JobID" />
+          </Key>
+          <Property Name="JobID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="JobName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Schedule" Type="smallint" Nullable="false" />
+          <Property Name="Recurring" Type="smallint" Nullable="false" />
+          <Property Name="RecursEvery" Type="smallint" Nullable="false" />
+          <Property Name="OccursOnceAt" Type="smalldatetime" Nullable="false" />
+          <Property Name="StartDate" Type="datetime" Nullable="false" />
+          <Property Name="EndDate" Type="datetime" Nullable="false" />
+          <Property Name="HasEndDate" Type="bit" Nullable="false" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="Enabled" Type="bit" />
+        </EntityType>
+        <EntityType Name="JobStatistics">
+          <Key>
+            <PropertyRef Name="JobStatId" />
+          </Key>
+          <Property Name="JobStatId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="JobId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="JobStatistics" Type="text" />
+        </EntityType>
+        <EntityType Name="Legacies">
+          <Key>
+            <PropertyRef Name="LegacyID" />
+          </Key>
+          <Property Name="LegacyID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LegacyName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="LegacySystemName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LegacyCodes">
+          <Key>
+            <PropertyRef Name="LegacyCodeID" />
+          </Key>
+          <Property Name="LegacyCodeID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LegacyID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LegacyCode" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'AIC_Config.dbo.LegacyValues' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="LegacyValues">
+          <Key>
+            <PropertyRef Name="LegacyCodeID" />
+            <PropertyRef Name="SourceID" />
+            <PropertyRef Name="Value" />
+          </Key>
+          <Property Name="LegacyCodeID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SourceID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Value" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MediaSet">
+          <Key>
+            <PropertyRef Name="Media_id" />
+          </Key>
+          <Property Name="Media_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="file_name" Type="varchar" MaxLength="256" />
+          <Property Name="content_type" Type="varchar" MaxLength="256" />
+          <Property Name="content_coding" Type="varchar" MaxLength="256" />
+          <Property Name="content" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="ProductMedia">
+          <Key>
+            <PropertyRef Name="ProductMediaId" />
+          </Key>
+          <Property Name="ProductMediaId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProductID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Media_id" Type="int" Nullable="false" />
+          <Property Name="FieldsMap" Type="text" />
+        </EntityType>
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProductName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProductSystemName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProductArea" Type="varchar" MaxLength="100" />
+          <Property Name="ProductHeader" Type="varchar" MaxLength="50" />
+          <Property Name="BusinessUnitID" Type="int" />
+        </EntityType>
+        <EntityType Name="Rules">
+          <Key>
+            <PropertyRef Name="RuleID" />
+          </Key>
+          <Property Name="RuleID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProductID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Expression" Type="varchar" Nullable="false" MaxLength="800" />
+          <Property Name="Created" Type="date" Nullable="false" />
+          <Property Name="Expires" Type="date" Nullable="false" />
+          <Property Name="RuleException" Type="varchar" MaxLength="1500" />
+        </EntityType>
+        <EntityType Name="Steps">
+          <Key>
+            <PropertyRef Name="StepID" />
+          </Key>
+          <Property Name="StepID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="StepName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="StepSystemName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="StepStatus" Type="bit" Nullable="false" />
+          <Property Name="StepType" Type="bit" Nullable="false" />
+          <Property Name="StepShared" Type="bit" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="AIC002F1">
+          <End Role="AIC_001_INSTITUICAO" Type="AIC_Config_Model.Store.AIC_001_INSTITUICAO" Multiplicity="1" />
+          <End Role="AIC_002_PONTO_VENDA" Type="AIC_Config_Model.Store.AIC_002_PONTO_VENDA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AIC_001_INSTITUICAO">
+              <PropertyRef Name="COD_INSTITUICAO" />
+            </Principal>
+            <Dependent Role="AIC_002_PONTO_VENDA">
+              <PropertyRef Name="COD_INSTITUICAO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AIC003F1">
+          <End Role="AIC_004_GRUPO" Type="AIC_Config_Model.Store.AIC_004_GRUPO" Multiplicity="1" />
+          <End Role="AIC_003_GRUPO_VENDA" Type="AIC_Config_Model.Store.AIC_003_GRUPO_VENDA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AIC_004_GRUPO">
+              <PropertyRef Name="COD_GRUPO" />
+            </Principal>
+            <Dependent Role="AIC_003_GRUPO_VENDA">
+              <PropertyRef Name="COD_GRUPO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AIC003F2">
+          <End Role="AIC_002_PONTO_VENDA" Type="AIC_Config_Model.Store.AIC_002_PONTO_VENDA" Multiplicity="1" />
+          <End Role="AIC_003_GRUPO_VENDA" Type="AIC_Config_Model.Store.AIC_003_GRUPO_VENDA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AIC_002_PONTO_VENDA">
+              <PropertyRef Name="COD_PONTO_VENDA" />
+              <PropertyRef Name="COD_INSTITUICAO" />
+            </Principal>
+            <Dependent Role="AIC_003_GRUPO_VENDA">
+              <PropertyRef Name="COD_PONTO_VENDA" />
+              <PropertyRef Name="COD_INSTITUICAO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AIC005F1">
+          <End Role="AIC_006_PROD_PARAMETRO" Type="AIC_Config_Model.Store.AIC_006_PROD_PARAMETRO" Multiplicity="1" />
+          <End Role="AIC_005_PROD_CAMPANHA" Type="AIC_Config_Model.Store.AIC_005_PROD_CAMPANHA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AIC_006_PROD_PARAMETRO">
+              <PropertyRef Name="ChannelID" />
+              <PropertyRef Name="ProductID" />
+              <PropertyRef Name="SEQ_PROD_PARAMETRO" />
+            </Principal>
+            <Dependent Role="AIC_005_PROD_CAMPANHA">
+              <PropertyRef Name="ChannelID" />
+              <PropertyRef Name="ProductID" />
+              <PropertyRef Name="SEQ_PROD_PARAMETRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AIC005F2">
+          <End Role="AIC_004_GRUPO" Type="AIC_Config_Model.Store.AIC_004_GRUPO" Multiplicity="1" />
+          <End Role="AIC_005_PROD_CAMPANHA" Type="AIC_Config_Model.Store.AIC_005_PROD_CAMPANHA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AIC_004_GRUPO">
+              <PropertyRef Name="COD_GRUPO" />
+            </Principal>
+            <Dependent Role="AIC_005_PROD_CAMPANHA">
+              <PropertyRef Name="COD_GRUPO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AIC006F1">
+          <End Role="Products" Type="AIC_Config_Model.Store.Products" Multiplicity="1" />
+          <End Role="AIC_006_PROD_PARAMETRO" Type="AIC_Config_Model.Store.AIC_006_PROD_PARAMETRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="AIC_006_PROD_PARAMETRO">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AIC006F2">
+          <End Role="Channels" Type="AIC_Config_Model.Store.Channels" Multiplicity="1" />
+          <End Role="AIC_006_PROD_PARAMETRO" Type="AIC_Config_Model.Store.AIC_006_PROD_PARAMETRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Channels">
+              <PropertyRef Name="ChannelID" />
+            </Principal>
+            <Dependent Role="AIC_006_PROD_PARAMETRO">
+              <PropertyRef Name="ChannelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cache_CacheOwner">
+          <End Role="CacheOwner" Type="AIC_Config_Model.Store.CacheOwner" Multiplicity="1" />
+          <End Role="Cache" Type="AIC_Config_Model.Store.Cache" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CacheOwner">
+              <PropertyRef Name="CacheOwnerID" />
+            </Principal>
+            <Dependent Role="Cache">
+              <PropertyRef Name="CacheOwnerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CacheStorage_Cache">
+          <End Role="Cache" Type="AIC_Config_Model.Store.Cache" Multiplicity="1" />
+          <End Role="CacheStorage" Type="AIC_Config_Model.Store.CacheStorage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cache">
+              <PropertyRef Name="CacheID" />
+            </Principal>
+            <Dependent Role="CacheStorage">
+              <PropertyRef Name="CacheID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChannelStepFields_ChannelSteps">
+          <End Role="ChannelSteps" Type="AIC_Config_Model.Store.ChannelSteps" Multiplicity="1" />
+          <End Role="ChannelStepFields" Type="AIC_Config_Model.Store.ChannelStepFields" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChannelSteps">
+              <PropertyRef Name="ChannelStepID" />
+            </Principal>
+            <Dependent Role="ChannelStepFields">
+              <PropertyRef Name="ChannelStepID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChannelStepFields_Fields">
+          <End Role="Fields" Type="AIC_Config_Model.Store.Fields" Multiplicity="1" />
+          <End Role="ChannelStepFields" Type="AIC_Config_Model.Store.ChannelStepFields" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fields">
+              <PropertyRef Name="FieldID" />
+            </Principal>
+            <Dependent Role="ChannelStepFields">
+              <PropertyRef Name="FieldID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChannelSteps_Channels">
+          <End Role="Channels" Type="AIC_Config_Model.Store.Channels" Multiplicity="1" />
+          <End Role="ChannelSteps" Type="AIC_Config_Model.Store.ChannelSteps" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Channels">
+              <PropertyRef Name="ChannelID" />
+            </Principal>
+            <Dependent Role="ChannelSteps">
+              <PropertyRef Name="ChannelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChannelSteps_Steps">
+          <End Role="Steps" Type="AIC_Config_Model.Store.Steps" Multiplicity="1" />
+          <End Role="ChannelSteps" Type="AIC_Config_Model.Store.ChannelSteps" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Steps">
+              <PropertyRef Name="StepID" />
+            </Principal>
+            <Dependent Role="ChannelSteps">
+              <PropertyRef Name="StepID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FlowRules_Flows">
+          <End Role="Flows" Type="AIC_Config_Model.Store.Flows" Multiplicity="1" />
+          <End Role="FlowRules" Type="AIC_Config_Model.Store.FlowRules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Flows">
+              <PropertyRef Name="FlowID" />
+            </Principal>
+            <Dependent Role="FlowRules">
+              <PropertyRef Name="FlowID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FlowRules_Flows1">
+          <End Role="Flows" Type="AIC_Config_Model.Store.Flows" Multiplicity="1" />
+          <End Role="FlowRules" Type="AIC_Config_Model.Store.FlowRules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Flows">
+              <PropertyRef Name="FlowID" />
+            </Principal>
+            <Dependent Role="FlowRules">
+              <PropertyRef Name="FlowID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FlowRules_Rules">
+          <End Role="Rules" Type="AIC_Config_Model.Store.Rules" Multiplicity="1" />
+          <End Role="FlowRules" Type="AIC_Config_Model.Store.FlowRules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rules">
+              <PropertyRef Name="RuleID" />
+            </Principal>
+            <Dependent Role="FlowRules">
+              <PropertyRef Name="RuleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FlowRules_Rules1">
+          <End Role="Rules" Type="AIC_Config_Model.Store.Rules" Multiplicity="1" />
+          <End Role="FlowRules" Type="AIC_Config_Model.Store.FlowRules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rules">
+              <PropertyRef Name="RuleID" />
+            </Principal>
+            <Dependent Role="FlowRules">
+              <PropertyRef Name="RuleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Flows_Products">
+          <End Role="Products" Type="AIC_Config_Model.Store.Products" Multiplicity="1" />
+          <End Role="Flows" Type="AIC_Config_Model.Store.Flows" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="Flows">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LegacyCodes_Legacies1">
+          <End Role="Legacies" Type="AIC_Config_Model.Store.Legacies" Multiplicity="1" />
+          <End Role="LegacyCodes" Type="AIC_Config_Model.Store.LegacyCodes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Legacies">
+              <PropertyRef Name="LegacyID" />
+            </Principal>
+            <Dependent Role="LegacyCodes">
+              <PropertyRef Name="LegacyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LegacyValues_LegacyCodes">
+          <End Role="LegacyCodes" Type="AIC_Config_Model.Store.LegacyCodes" Multiplicity="1" />
+          <End Role="LegacyValues" Type="AIC_Config_Model.Store.LegacyValues" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LegacyCodes">
+              <PropertyRef Name="LegacyCodeID" />
+            </Principal>
+            <Dependent Role="LegacyValues">
+              <PropertyRef Name="LegacyCodeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rules_Products">
+          <End Role="Products" Type="AIC_Config_Model.Store.Products" Multiplicity="1" />
+          <End Role="Rules" Type="AIC_Config_Model.Store.Rules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="Rules">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RefAIC_001_INSTITUICAO461">
+          <End Role="AIC_001_INSTITUICAO" Type="AIC_Config_Model.Store.AIC_001_INSTITUICAO" Multiplicity="1" />
+          <End Role="AIC_007_FUNC_INSTITUICAO" Type="AIC_Config_Model.Store.AIC_007_FUNC_INSTITUICAO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AIC_001_INSTITUICAO">
+              <PropertyRef Name="COD_INSTITUICAO" />
+            </Principal>
+            <Dependent Role="AIC_007_FUNC_INSTITUICAO">
+              <PropertyRef Name="COD_INSTITUICAO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AIC_Config_Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="AIC_Config_Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AIC_001_INSTITUICAO" EntityType="AIC_Config_Model.AIC_001_INSTITUICAO" />
+          <EntitySet Name="AIC_002_PONTO_VENDA" EntityType="AIC_Config_Model.AIC_002_PONTO_VENDA" />
+          <EntitySet Name="AIC_004_GRUPO" EntityType="AIC_Config_Model.AIC_004_GRUPO" />
+          <EntitySet Name="AIC_005_PROD_CAMPANHA" EntityType="AIC_Config_Model.AIC_005_PROD_CAMPANHA" />
+          <EntitySet Name="AIC_006_PROD_PARAMETRO" EntityType="AIC_Config_Model.AIC_006_PROD_PARAMETRO" />
+          <EntitySet Name="AIC_007_FUNC_INSTITUICAO" EntityType="AIC_Config_Model.AIC_007_FUNC_INSTITUICAO" />
+          <EntitySet Name="BatchTags" EntityType="AIC_Config_Model.BatchTag" />
+          <EntitySet Name="Caches" EntityType="AIC_Config_Model.Cache" />
+          <EntitySet Name="CacheOwners" EntityType="AIC_Config_Model.CacheOwner" />
+          <EntitySet Name="CacheStorages" EntityType="AIC_Config_Model.CacheStorage" />
+          <EntitySet Name="Channels" EntityType="AIC_Config_Model.Channel" />
+          <EntitySet Name="ChannelSteps" EntityType="AIC_Config_Model.ChannelStep" />
+          <EntitySet Name="Fields" EntityType="AIC_Config_Model.Field" />
+          <EntitySet Name="FlowRules" EntityType="AIC_Config_Model.FlowRule" />
+          <EntitySet Name="Flows" EntityType="AIC_Config_Model.Flow" />
+          <EntitySet Name="Histories" EntityType="AIC_Config_Model.History" />
+          <EntitySet Name="Jobs" EntityType="AIC_Config_Model.Job" />
+          <EntitySet Name="JobStatistics" EntityType="AIC_Config_Model.JobStatistic" />
+          <EntitySet Name="Legacies" EntityType="AIC_Config_Model.Legacy" />
+          <EntitySet Name="LegacyCodes" EntityType="AIC_Config_Model.LegacyCode" />
+          <EntitySet Name="LegacyValues" EntityType="AIC_Config_Model.LegacyValue" />
+          <EntitySet Name="MediaSets" EntityType="AIC_Config_Model.MediaSet" />
+          <EntitySet Name="ProductMedias" EntityType="AIC_Config_Model.ProductMedia" />
+          <EntitySet Name="Products" EntityType="AIC_Config_Model.Product" />
+          <EntitySet Name="Rules" EntityType="AIC_Config_Model.Rule" />
+          <EntitySet Name="Steps" EntityType="AIC_Config_Model.Step" />
+          <EntitySet Name="sysdiagrams" EntityType="AIC_Config_Model.sysdiagram" />
+          <AssociationSet Name="AIC002F1" Association="AIC_Config_Model.AIC002F1">
+            <End Role="AIC_001_INSTITUICAO" EntitySet="AIC_001_INSTITUICAO" />
+            <End Role="AIC_002_PONTO_VENDA" EntitySet="AIC_002_PONTO_VENDA" />
+          </AssociationSet>
+          <AssociationSet Name="RefAIC_001_INSTITUICAO461" Association="AIC_Config_Model.RefAIC_001_INSTITUICAO461">
+            <End Role="AIC_001_INSTITUICAO" EntitySet="AIC_001_INSTITUICAO" />
+            <End Role="AIC_007_FUNC_INSTITUICAO" EntitySet="AIC_007_FUNC_INSTITUICAO" />
+          </AssociationSet>
+          <AssociationSet Name="AIC005F2" Association="AIC_Config_Model.AIC005F2">
+            <End Role="AIC_004_GRUPO" EntitySet="AIC_004_GRUPO" />
+            <End Role="AIC_005_PROD_CAMPANHA" EntitySet="AIC_005_PROD_CAMPANHA" />
+          </AssociationSet>
+          <AssociationSet Name="AIC005F1" Association="AIC_Config_Model.AIC005F1">
+            <End Role="AIC_006_PROD_PARAMETRO" EntitySet="AIC_006_PROD_PARAMETRO" />
+            <End Role="AIC_005_PROD_CAMPANHA" EntitySet="AIC_005_PROD_CAMPANHA" />
+          </AssociationSet>
+          <AssociationSet Name="AIC006F1" Association="AIC_Config_Model.AIC006F1">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="AIC_006_PROD_PARAMETRO" EntitySet="AIC_006_PROD_PARAMETRO" />
+          </AssociationSet>
+          <AssociationSet Name="AIC006F2" Association="AIC_Config_Model.AIC006F2">
+            <End Role="Channels" EntitySet="Channels" />
+            <End Role="AIC_006_PROD_PARAMETRO" EntitySet="AIC_006_PROD_PARAMETRO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cache_CacheOwner" Association="AIC_Config_Model.FK_Cache_CacheOwner">
+            <End Role="CacheOwner" EntitySet="CacheOwners" />
+            <End Role="Cache" EntitySet="Caches" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CacheStorage_Cache" Association="AIC_Config_Model.FK_CacheStorage_Cache">
+            <End Role="Cache" EntitySet="Caches" />
+            <End Role="CacheStorage" EntitySet="CacheStorages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChannelSteps_Channels" Association="AIC_Config_Model.FK_ChannelSteps_Channels">
+            <End Role="Channels" EntitySet="Channels" />
+            <End Role="ChannelSteps" EntitySet="ChannelSteps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChannelSteps_Steps" Association="AIC_Config_Model.FK_ChannelSteps_Steps">
+            <End Role="Steps" EntitySet="Steps" />
+            <End Role="ChannelSteps" EntitySet="ChannelSteps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FlowRules_Flows" Association="AIC_Config_Model.FK_FlowRules_Flows">
+            <End Role="Flows" EntitySet="Flows" />
+            <End Role="FlowRules" EntitySet="FlowRules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FlowRules_Flows1" Association="AIC_Config_Model.FK_FlowRules_Flows1">
+            <End Role="Flows" EntitySet="Flows" />
+            <End Role="FlowRules" EntitySet="FlowRules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FlowRules_Rules" Association="AIC_Config_Model.FK_FlowRules_Rules">
+            <End Role="Rules" EntitySet="Rules" />
+            <End Role="FlowRules" EntitySet="FlowRules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FlowRules_Rules1" Association="AIC_Config_Model.FK_FlowRules_Rules1">
+            <End Role="Rules" EntitySet="Rules" />
+            <End Role="FlowRules" EntitySet="FlowRules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Flows_Products" Association="AIC_Config_Model.FK_Flows_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="Flows" EntitySet="Flows" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LegacyCodes_Legacies1" Association="AIC_Config_Model.FK_LegacyCodes_Legacies1">
+            <End Role="Legacies" EntitySet="Legacies" />
+            <End Role="LegacyCodes" EntitySet="LegacyCodes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LegacyValues_LegacyCodes" Association="AIC_Config_Model.FK_LegacyValues_LegacyCodes">
+            <End Role="LegacyCodes" EntitySet="LegacyCodes" />
+            <End Role="LegacyValues" EntitySet="LegacyValues" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rules_Products" Association="AIC_Config_Model.FK_Rules_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="Rules" EntitySet="Rules" />
+          </AssociationSet>
+          <AssociationSet Name="AIC_003_GRUPO_VENDA" Association="AIC_Config_Model.AIC_003_GRUPO_VENDA">
+            <End Role="AIC_004_GRUPO" EntitySet="AIC_004_GRUPO" />
+            <End Role="AIC_002_PONTO_VENDA" EntitySet="AIC_002_PONTO_VENDA" />
+          </AssociationSet>
+          <AssociationSet Name="ChannelStepFields" Association="AIC_Config_Model.ChannelStepFields">
+            <End Role="ChannelSteps" EntitySet="ChannelSteps" />
+            <End Role="Fields" EntitySet="Fields" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AIC_001_INSTITUICAO">
+          <Key>
+            <PropertyRef Name="COD_INSTITUICAO" />
+          </Key>
+          <Property Name="COD_INSTITUICAO" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOM_INSTITUICAO" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="DES_INSTITUICAO" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="STA_ATIVO" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="AIC_002_PONTO_VENDA" Relationship="AIC_Config_Model.AIC002F1" FromRole="AIC_001_INSTITUICAO" ToRole="AIC_002_PONTO_VENDA" />
+          <NavigationProperty Name="AIC_007_FUNC_INSTITUICAO" Relationship="AIC_Config_Model.RefAIC_001_INSTITUICAO461" FromRole="AIC_001_INSTITUICAO" ToRole="AIC_007_FUNC_INSTITUICAO" />
+        </EntityType>
+        <EntityType Name="AIC_002_PONTO_VENDA">
+          <Key>
+            <PropertyRef Name="COD_PONTO_VENDA" />
+            <PropertyRef Name="COD_INSTITUICAO" />
+          </Key>
+          <Property Name="COD_PONTO_VENDA" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="COD_INSTITUICAO" Type="Int16" Nullable="false" />
+          <Property Name="NOM_PONTO_VENDA" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="DES_PONTO_VENDA" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="STA_ATIVO" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="AIC_001_INSTITUICAO" Relationship="AIC_Config_Model.AIC002F1" FromRole="AIC_002_PONTO_VENDA" ToRole="AIC_001_INSTITUICAO" />
+          <NavigationProperty Name="AIC_004_GRUPO" Relationship="AIC_Config_Model.AIC_003_GRUPO_VENDA" FromRole="AIC_002_PONTO_VENDA" ToRole="AIC_004_GRUPO" />
+        </EntityType>
+        <EntityType Name="AIC_004_GRUPO">
+          <Key>
+            <PropertyRef Name="COD_GRUPO" />
+          </Key>
+          <Property Name="COD_GRUPO" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOM_GRUPO" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DES_GRUPO" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="STA_ATIVO" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="AIC_005_PROD_CAMPANHA" Relationship="AIC_Config_Model.AIC005F2" FromRole="AIC_004_GRUPO" ToRole="AIC_005_PROD_CAMPANHA" />
+          <NavigationProperty Name="AIC_002_PONTO_VENDA" Relationship="AIC_Config_Model.AIC_003_GRUPO_VENDA" FromRole="AIC_004_GRUPO" ToRole="AIC_002_PONTO_VENDA" />
+        </EntityType>
+        <EntityType Name="AIC_005_PROD_CAMPANHA">
+          <Key>
+            <PropertyRef Name="COD_GRUPO" />
+            <PropertyRef Name="ChannelID" />
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="SEQ_PROD_PARAMETRO" />
+          </Key>
+          <Property Name="COD_GRUPO" Type="Int16" Nullable="false" />
+          <Property Name="ChannelID" Type="Guid" Nullable="false" />
+          <Property Name="ProductID" Type="Guid" Nullable="false" />
+          <Property Name="SEQ_PROD_PARAMETRO" Type="Int16" Nullable="false" />
+          <Property Name="NOM_CAMPANHA_VENDA" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="DES_CAMPANHA_VENDA" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="DTA_INI_VIGENCIA" Type="DateTime" Nullable="false" />
+          <Property Name="DTA_FIM_VIGENCIA" Type="DateTime" />
+          <NavigationProperty Name="AIC_004_GRUPO" Relationship="AIC_Config_Model.AIC005F2" FromRole="AIC_005_PROD_CAMPANHA" ToRole="AIC_004_GRUPO" />
+          <NavigationProperty Name="AIC_006_PROD_PARAMETRO" Relationship="AIC_Config_Model.AIC005F1" FromRole="AIC_005_PROD_CAMPANHA" ToRole="AIC_006_PROD_PARAMETRO" />
+        </EntityType>
+        <EntityType Name="AIC_006_PROD_PARAMETRO">
+          <Key>
+            <PropertyRef Name="ChannelID" />
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="SEQ_PROD_PARAMETRO" />
+          </Key>
+          <Property Name="ChannelID" Type="Guid" Nullable="false" />
+          <Property Name="ProductID" Type="Guid" Nullable="false" />
+          <Property Name="SEQ_PROD_PARAMETRO" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="XML_PROD_PARAMETRO" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="STA_PADRAO" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="AIC_005_PROD_CAMPANHA" Relationship="AIC_Config_Model.AIC005F1" FromRole="AIC_006_PROD_PARAMETRO" ToRole="AIC_005_PROD_CAMPANHA" />
+          <NavigationProperty Name="Product" Relationship="AIC_Config_Model.AIC006F1" FromRole="AIC_006_PROD_PARAMETRO" ToRole="Products" />
+          <NavigationProperty Name="Channel" Relationship="AIC_Config_Model.AIC006F2" FromRole="AIC_006_PROD_PARAMETRO" ToRole="Channels" />
+        </EntityType>
+        <EntityType Name="AIC_007_FUNC_INSTITUICAO">
+          <Key>
+            <PropertyRef Name="COD_INSTITUICAO" />
+            <PropertyRef Name="COD_MATRICULA" />
+          </Key>
+          <Property Name="COD_INSTITUICAO" Type="Int16" Nullable="false" />
+          <Property Name="COD_MATRICULA" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="STA_ATIVO" Type="Boolean" Nullable="false" />
+          <Property Name="NOM_FUNCIONARIO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="COD_MATR_PARCEIRO" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="SIG_UF_FUNCIONARIO" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="DTA_CADASTRO" Type="DateTime" />
+          <NavigationProperty Name="AIC_001_INSTITUICAO" Relationship="AIC_Config_Model.RefAIC_001_INSTITUICAO461" FromRole="AIC_007_FUNC_INSTITUICAO" ToRole="AIC_001_INSTITUICAO" />
+        </EntityType>
+        <EntityType Name="BatchTag">
+          <Key>
+            <PropertyRef Name="BatchTagId" />
+          </Key>
+          <Property Name="BatchTagId" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="Position" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="TypeRecord" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="Value" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="OrderVal" Type="Int32" />
+          <Property Name="ProductID" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cache">
+          <Key>
+            <PropertyRef Name="CacheID" />
+          </Key>
+          <Property Name="CacheID" Type="Guid" Nullable="false" />
+          <Property Name="CacheOwnerID" Type="Guid" Nullable="false" />
+          <Property Name="CacheName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CacheOwner" Relationship="AIC_Config_Model.FK_Cache_CacheOwner" FromRole="Cache" ToRole="CacheOwner" />
+          <NavigationProperty Name="CacheStorages" Relationship="AIC_Config_Model.FK_CacheStorage_Cache" FromRole="Cache" ToRole="CacheStorage" />
+        </EntityType>
+        <EntityType Name="CacheOwner">
+          <Key>
+            <PropertyRef Name="CacheOwnerID" />
+          </Key>
+          <Property Name="CacheOwnerID" Type="Guid" Nullable="false" />
+          <Property Name="OwnerName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Caches" Relationship="AIC_Config_Model.FK_Cache_CacheOwner" FromRole="CacheOwner" ToRole="Cache" />
+        </EntityType>
+        <EntityType Name="CacheStorage">
+          <Key>
+            <PropertyRef Name="CacheStorageID" />
+          </Key>
+          <Property Name="CacheStorageID" Type="Guid" Nullable="false" />
+          <Property Name="CacheID" Type="Guid" Nullable="false" />
+          <Property Name="Method" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Enabled" Type="Boolean" Nullable="false" />
+          <Property Name="Timer" Type="Int16" Nullable="false" />
+          <Property Name="Region" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Cache" Relationship="AIC_Config_Model.FK_CacheStorage_Cache" FromRole="CacheStorage" ToRole="Cache" />
+        </EntityType>
+        <EntityType Name="Channel">
+          <Key>
+            <PropertyRef Name="ChannelID" />
+          </Key>
+          <Property Name="ChannelID" Type="Guid" Nullable="false" />
+          <Property Name="ChannelName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="AIC_006_PROD_PARAMETRO" Relationship="AIC_Config_Model.AIC006F2" FromRole="Channels" ToRole="AIC_006_PROD_PARAMETRO" />
+          <NavigationProperty Name="ChannelSteps" Relationship="AIC_Config_Model.FK_ChannelSteps_Channels" FromRole="Channels" ToRole="ChannelSteps" />
+        </EntityType>
+        <EntityType Name="ChannelStep">
+          <Key>
+            <PropertyRef Name="ChannelStepID" />
+          </Key>
+          <Property Name="ChannelStepID" Type="Guid" Nullable="false" />
+          <Property Name="ChannelID" Type="Guid" Nullable="false" />
+          <Property Name="StepID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="Channel" Relationship="AIC_Config_Model.FK_ChannelSteps_Channels" FromRole="ChannelSteps" ToRole="Channels" />
+          <NavigationProperty Name="Step" Relationship="AIC_Config_Model.FK_ChannelSteps_Steps" FromRole="ChannelSteps" ToRole="Steps" />
+          <NavigationProperty Name="Fields" Relationship="AIC_Config_Model.ChannelStepFields" FromRole="ChannelSteps" ToRole="Fields" />
+        </EntityType>
+        <EntityType Name="Field">
+          <Key>
+            <PropertyRef Name="FieldID" />
+          </Key>
+          <Property Name="FieldID" Type="Guid" Nullable="false" />
+          <Property Name="FieldName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FieldSystemName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FieldStatus" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="ChannelSteps" Relationship="AIC_Config_Model.ChannelStepFields" FromRole="Fields" ToRole="ChannelSteps" />
+        </EntityType>
+        <EntityType Name="FlowRule">
+          <Key>
+            <PropertyRef Name="FlowRuleID" />
+          </Key>
+          <Property Name="FlowID" Type="Guid" Nullable="false" />
+          <Property Name="RuleID" Type="Guid" Nullable="false" />
+          <Property Name="FlowRuleID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="Flow" Relationship="AIC_Config_Model.FK_FlowRules_Flows" FromRole="FlowRules" ToRole="Flows" />
+          <NavigationProperty Name="Flow1" Relationship="AIC_Config_Model.FK_FlowRules_Flows1" FromRole="FlowRules" ToRole="Flows" />
+          <NavigationProperty Name="Rule" Relationship="AIC_Config_Model.FK_FlowRules_Rules" FromRole="FlowRules" ToRole="Rules" />
+          <NavigationProperty Name="Rule1" Relationship="AIC_Config_Model.FK_FlowRules_Rules1" FromRole="FlowRules" ToRole="Rules" />
+        </EntityType>
+        <EntityType Name="Flow">
+          <Key>
+            <PropertyRef Name="FlowID" />
+          </Key>
+          <Property Name="FlowID" Type="Guid" Nullable="false" />
+          <Property Name="ProductID" Type="Guid" Nullable="false" />
+          <Property Name="ChannelStepID" Type="Guid" Nullable="false" />
+          <Property Name="StepNumber" Type="Int32" />
+          <Property Name="Fails" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="FlowRules" Relationship="AIC_Config_Model.FK_FlowRules_Flows" FromRole="Flows" ToRole="FlowRules" />
+          <NavigationProperty Name="FlowRules1" Relationship="AIC_Config_Model.FK_FlowRules_Flows1" FromRole="Flows" ToRole="FlowRules" />
+          <NavigationProperty Name="Product" Relationship="AIC_Config_Model.FK_Flows_Products" FromRole="Flows" ToRole="Products" />
+        </EntityType>
+        <EntityType Name="History">
+          <Key>
+            <PropertyRef Name="SourceID" />
+            <PropertyRef Name="Created" />
+            <PropertyRef Name="Modified" />
+            <PropertyRef Name="Owner" />
+          </Key>
+          <Property Name="SourceID" Type="Guid" Nullable="false" />
+          <Property Name="Created" Type="DateTime" Nullable="false" />
+          <Property Name="Modified" Type="DateTime" Nullable="false" />
+          <Property Name="Owner" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Job">
+          <Key>
+            <PropertyRef Name="JobID" />
+          </Key>
+          <Property Name="JobID" Type="Guid" Nullable="false" />
+          <Property Name="JobName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Schedule" Type="Int16" Nullable="false" />
+          <Property Name="Recurring" Type="Int16" Nullable="false" />
+          <Property Name="RecursEvery" Type="Int16" Nullable="false" />
+          <Property Name="OccursOnceAt" Type="DateTime" Nullable="false" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" />
+          <Property Name="EndDate" Type="DateTime" Nullable="false" />
+          <Property Name="HasEndDate" Type="Boolean" Nullable="false" />
+          <Property Name="Modified" Type="DateTime" />
+          <Property Name="Enabled" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="JobStatistic">
+          <Key>
+            <PropertyRef Name="JobStatId" />
+          </Key>
+          <Property Name="JobStatId" Type="Guid" Nullable="false" />
+          <Property Name="JobId" Type="Guid" Nullable="false" />
+          <Property Name="Created" Type="DateTime" />
+          <Property Name="JobStatistics" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Legacy">
+          <Key>
+            <PropertyRef Name="LegacyID" />
+          </Key>
+          <Property Name="LegacyID" Type="Guid" Nullable="false" />
+          <Property Name="LegacyName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="LegacySystemName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="LegacyCodes" Relationship="AIC_Config_Model.FK_LegacyCodes_Legacies1" FromRole="Legacies" ToRole="LegacyCodes" />
+        </EntityType>
+        <EntityType Name="LegacyCode">
+          <Key>
+            <PropertyRef Name="LegacyCodeID" />
+          </Key>
+          <Property Name="LegacyCodeID" Type="Guid" Nullable="false" />
+          <Property Name="LegacyID" Type="Guid" Nullable="false" />
+          <Property Name="LegacyCode1" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Legacy" Relationship="AIC_Config_Model.FK_LegacyCodes_Legacies1" FromRole="LegacyCodes" ToRole="Legacies" />
+          <NavigationProperty Name="LegacyValues" Relationship="AIC_Config_Model.FK_LegacyValues_LegacyCodes" FromRole="LegacyCodes" ToRole="LegacyValues" />
+        </EntityType>
+        <EntityType Name="LegacyValue">
+          <Key>
+            <PropertyRef Name="LegacyCodeID" />
+            <PropertyRef Name="SourceID" />
+            <PropertyRef Name="Value" />
+          </Key>
+          <Property Name="LegacyCodeID" Type="Guid" Nullable="false" />
+          <Property Name="SourceID" Type="Guid" Nullable="false" />
+          <Property Name="Value" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="LegacyCode" Relationship="AIC_Config_Model.FK_LegacyValues_LegacyCodes" FromRole="LegacyValues" ToRole="LegacyCodes" />
+        </EntityType>
+        <EntityType Name="MediaSet">
+          <Key>
+            <PropertyRef Name="Media_id" />
+          </Key>
+          <Property Name="Media_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="file_name" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
+          <Property Name="content_type" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
+          <Property Name="content_coding" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
+          <Property Name="content" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="ProductMedia">
+          <Key>
+            <PropertyRef Name="ProductMediaId" />
+          </Key>
+          <Property Name="ProductMediaId" Type="Guid" Nullable="false" />
+          <Property Name="ProductID" Type="Guid" Nullable="false" />
+          <Property Name="Media_id" Type="Int32" Nullable="false" />
+          <Property Name="FieldsMap" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="Guid" Nullable="false" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ProductSystemName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ProductArea" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ProductHeader" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BusinessUnitID" Type="Int32" />
+          <NavigationProperty Name="AIC_006_PROD_PARAMETRO" Relationship="AIC_Config_Model.AIC006F1" FromRole="Products" ToRole="AIC_006_PROD_PARAMETRO" />
+          <NavigationProperty Name="Flows" Relationship="AIC_Config_Model.FK_Flows_Products" FromRole="Products" ToRole="Flows" />
+          <NavigationProperty Name="Rules" Relationship="AIC_Config_Model.FK_Rules_Products" FromRole="Products" ToRole="Rules" />
+        </EntityType>
+        <EntityType Name="Rule">
+          <Key>
+            <PropertyRef Name="RuleID" />
+          </Key>
+          <Property Name="RuleID" Type="Guid" Nullable="false" />
+          <Property Name="ProductID" Type="Guid" Nullable="false" />
+          <Property Name="Expression" Type="String" Nullable="false" MaxLength="800" Unicode="false" FixedLength="false" />
+          <Property Name="Created" Type="DateTime" Nullable="false" />
+          <Property Name="Expires" Type="DateTime" Nullable="false" />
+          <Property Name="RuleException" Type="String" MaxLength="1500" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="FlowRules" Relationship="AIC_Config_Model.FK_FlowRules_Rules" FromRole="Rules" ToRole="FlowRules" />
+          <NavigationProperty Name="FlowRules1" Relationship="AIC_Config_Model.FK_FlowRules_Rules1" FromRole="Rules" ToRole="FlowRules" />
+          <NavigationProperty Name="Product" Relationship="AIC_Config_Model.FK_Rules_Products" FromRole="Rules" ToRole="Products" />
+        </EntityType>
+        <EntityType Name="Step">
+          <Key>
+            <PropertyRef Name="StepID" />
+          </Key>
+          <Property Name="StepID" Type="Guid" Nullable="false" />
+          <Property Name="StepName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="StepSystemName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="StepStatus" Type="Boolean" Nullable="false" />
+          <Property Name="StepType" Type="Boolean" Nullable="false" />
+          <Property Name="StepShared" Type="Boolean" />
+          <NavigationProperty Name="ChannelSteps" Relationship="AIC_Config_Model.FK_ChannelSteps_Steps" FromRole="Steps" ToRole="ChannelSteps" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="AIC002F1">
+          <End Role="AIC_001_INSTITUICAO" Type="AIC_Config_Model.AIC_001_INSTITUICAO" Multiplicity="1" />
+          <End Role="AIC_002_PONTO_VENDA" Type="AIC_Config_Model.AIC_002_PONTO_VENDA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AIC_001_INSTITUICAO">
+              <PropertyRef Name="COD_INSTITUICAO" />
+            </Principal>
+            <Dependent Role="AIC_002_PONTO_VENDA">
+              <PropertyRef Name="COD_INSTITUICAO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RefAIC_001_INSTITUICAO461">
+          <End Role="AIC_001_INSTITUICAO" Type="AIC_Config_Model.AIC_001_INSTITUICAO" Multiplicity="1" />
+          <End Role="AIC_007_FUNC_INSTITUICAO" Type="AIC_Config_Model.AIC_007_FUNC_INSTITUICAO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AIC_001_INSTITUICAO">
+              <PropertyRef Name="COD_INSTITUICAO" />
+            </Principal>
+            <Dependent Role="AIC_007_FUNC_INSTITUICAO">
+              <PropertyRef Name="COD_INSTITUICAO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AIC005F2">
+          <End Role="AIC_004_GRUPO" Type="AIC_Config_Model.AIC_004_GRUPO" Multiplicity="1" />
+          <End Role="AIC_005_PROD_CAMPANHA" Type="AIC_Config_Model.AIC_005_PROD_CAMPANHA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AIC_004_GRUPO">
+              <PropertyRef Name="COD_GRUPO" />
+            </Principal>
+            <Dependent Role="AIC_005_PROD_CAMPANHA">
+              <PropertyRef Name="COD_GRUPO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AIC005F1">
+          <End Role="AIC_006_PROD_PARAMETRO" Type="AIC_Config_Model.AIC_006_PROD_PARAMETRO" Multiplicity="1" />
+          <End Role="AIC_005_PROD_CAMPANHA" Type="AIC_Config_Model.AIC_005_PROD_CAMPANHA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AIC_006_PROD_PARAMETRO">
+              <PropertyRef Name="ChannelID" />
+              <PropertyRef Name="ProductID" />
+              <PropertyRef Name="SEQ_PROD_PARAMETRO" />
+            </Principal>
+            <Dependent Role="AIC_005_PROD_CAMPANHA">
+              <PropertyRef Name="ChannelID" />
+              <PropertyRef Name="ProductID" />
+              <PropertyRef Name="SEQ_PROD_PARAMETRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AIC006F1">
+          <End Role="Products" Type="AIC_Config_Model.Product" Multiplicity="1" />
+          <End Role="AIC_006_PROD_PARAMETRO" Type="AIC_Config_Model.AIC_006_PROD_PARAMETRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="AIC_006_PROD_PARAMETRO">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AIC006F2">
+          <End Role="Channels" Type="AIC_Config_Model.Channel" Multiplicity="1" />
+          <End Role="AIC_006_PROD_PARAMETRO" Type="AIC_Config_Model.AIC_006_PROD_PARAMETRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Channels">
+              <PropertyRef Name="ChannelID" />
+            </Principal>
+            <Dependent Role="AIC_006_PROD_PARAMETRO">
+              <PropertyRef Name="ChannelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cache_CacheOwner">
+          <End Role="CacheOwner" Type="AIC_Config_Model.CacheOwner" Multiplicity="1" />
+          <End Role="Cache" Type="AIC_Config_Model.Cache" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CacheOwner">
+              <PropertyRef Name="CacheOwnerID" />
+            </Principal>
+            <Dependent Role="Cache">
+              <PropertyRef Name="CacheOwnerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CacheStorage_Cache">
+          <End Role="Cache" Type="AIC_Config_Model.Cache" Multiplicity="1" />
+          <End Role="CacheStorage" Type="AIC_Config_Model.CacheStorage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cache">
+              <PropertyRef Name="CacheID" />
+            </Principal>
+            <Dependent Role="CacheStorage">
+              <PropertyRef Name="CacheID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChannelSteps_Channels">
+          <End Role="Channels" Type="AIC_Config_Model.Channel" Multiplicity="1" />
+          <End Role="ChannelSteps" Type="AIC_Config_Model.ChannelStep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Channels">
+              <PropertyRef Name="ChannelID" />
+            </Principal>
+            <Dependent Role="ChannelSteps">
+              <PropertyRef Name="ChannelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChannelSteps_Steps">
+          <End Role="Steps" Type="AIC_Config_Model.Step" Multiplicity="1" />
+          <End Role="ChannelSteps" Type="AIC_Config_Model.ChannelStep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Steps">
+              <PropertyRef Name="StepID" />
+            </Principal>
+            <Dependent Role="ChannelSteps">
+              <PropertyRef Name="StepID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FlowRules_Flows">
+          <End Role="Flows" Type="AIC_Config_Model.Flow" Multiplicity="1" />
+          <End Role="FlowRules" Type="AIC_Config_Model.FlowRule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Flows">
+              <PropertyRef Name="FlowID" />
+            </Principal>
+            <Dependent Role="FlowRules">
+              <PropertyRef Name="FlowID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FlowRules_Flows1">
+          <End Role="Flows" Type="AIC_Config_Model.Flow" Multiplicity="1" />
+          <End Role="FlowRules" Type="AIC_Config_Model.FlowRule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Flows">
+              <PropertyRef Name="FlowID" />
+            </Principal>
+            <Dependent Role="FlowRules">
+              <PropertyRef Name="FlowID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FlowRules_Rules">
+          <End Role="Rules" Type="AIC_Config_Model.Rule" Multiplicity="1" />
+          <End Role="FlowRules" Type="AIC_Config_Model.FlowRule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rules">
+              <PropertyRef Name="RuleID" />
+            </Principal>
+            <Dependent Role="FlowRules">
+              <PropertyRef Name="RuleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FlowRules_Rules1">
+          <End Role="Rules" Type="AIC_Config_Model.Rule" Multiplicity="1" />
+          <End Role="FlowRules" Type="AIC_Config_Model.FlowRule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rules">
+              <PropertyRef Name="RuleID" />
+            </Principal>
+            <Dependent Role="FlowRules">
+              <PropertyRef Name="RuleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Flows_Products">
+          <End Role="Products" Type="AIC_Config_Model.Product" Multiplicity="1" />
+          <End Role="Flows" Type="AIC_Config_Model.Flow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="Flows">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LegacyCodes_Legacies1">
+          <End Role="Legacies" Type="AIC_Config_Model.Legacy" Multiplicity="1" />
+          <End Role="LegacyCodes" Type="AIC_Config_Model.LegacyCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Legacies">
+              <PropertyRef Name="LegacyID" />
+            </Principal>
+            <Dependent Role="LegacyCodes">
+              <PropertyRef Name="LegacyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LegacyValues_LegacyCodes">
+          <End Role="LegacyCodes" Type="AIC_Config_Model.LegacyCode" Multiplicity="1" />
+          <End Role="LegacyValues" Type="AIC_Config_Model.LegacyValue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LegacyCodes">
+              <PropertyRef Name="LegacyCodeID" />
+            </Principal>
+            <Dependent Role="LegacyValues">
+              <PropertyRef Name="LegacyCodeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rules_Products">
+          <End Role="Products" Type="AIC_Config_Model.Product" Multiplicity="1" />
+          <End Role="Rules" Type="AIC_Config_Model.Rule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="Rules">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AIC_003_GRUPO_VENDA">
+          <End Role="AIC_004_GRUPO" Type="AIC_Config_Model.AIC_004_GRUPO" Multiplicity="*" />
+          <End Role="AIC_002_PONTO_VENDA" Type="AIC_Config_Model.AIC_002_PONTO_VENDA" Multiplicity="*" />
+        </Association>
+        <Association Name="ChannelStepFields">
+          <End Role="ChannelSteps" Type="AIC_Config_Model.ChannelStep" Multiplicity="*" />
+          <End Role="Fields" Type="AIC_Config_Model.Field" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AIC_Config_ModelStoreContainer" CdmEntityContainer="AIC_Config_Entities">
+          <EntitySetMapping Name="AIC_001_INSTITUICAO">
+            <EntityTypeMapping TypeName="AIC_Config_Model.AIC_001_INSTITUICAO">
+              <MappingFragment StoreEntitySet="AIC_001_INSTITUICAO">
+                <ScalarProperty Name="COD_INSTITUICAO" ColumnName="COD_INSTITUICAO" />
+                <ScalarProperty Name="NOM_INSTITUICAO" ColumnName="NOM_INSTITUICAO" />
+                <ScalarProperty Name="DES_INSTITUICAO" ColumnName="DES_INSTITUICAO" />
+                <ScalarProperty Name="STA_ATIVO" ColumnName="STA_ATIVO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AIC_002_PONTO_VENDA">
+            <EntityTypeMapping TypeName="AIC_Config_Model.AIC_002_PONTO_VENDA">
+              <MappingFragment StoreEntitySet="AIC_002_PONTO_VENDA">
+                <ScalarProperty Name="COD_PONTO_VENDA" ColumnName="COD_PONTO_VENDA" />
+                <ScalarProperty Name="COD_INSTITUICAO" ColumnName="COD_INSTITUICAO" />
+                <ScalarProperty Name="NOM_PONTO_VENDA" ColumnName="NOM_PONTO_VENDA" />
+                <ScalarProperty Name="DES_PONTO_VENDA" ColumnName="DES_PONTO_VENDA" />
+                <ScalarProperty Name="STA_ATIVO" ColumnName="STA_ATIVO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AIC_004_GRUPO">
+            <EntityTypeMapping TypeName="AIC_Config_Model.AIC_004_GRUPO">
+              <MappingFragment StoreEntitySet="AIC_004_GRUPO">
+                <ScalarProperty Name="COD_GRUPO" ColumnName="COD_GRUPO" />
+                <ScalarProperty Name="NOM_GRUPO" ColumnName="NOM_GRUPO" />
+                <ScalarProperty Name="DES_GRUPO" ColumnName="DES_GRUPO" />
+                <ScalarProperty Name="STA_ATIVO" ColumnName="STA_ATIVO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AIC_005_PROD_CAMPANHA">
+            <EntityTypeMapping TypeName="AIC_Config_Model.AIC_005_PROD_CAMPANHA">
+              <MappingFragment StoreEntitySet="AIC_005_PROD_CAMPANHA">
+                <ScalarProperty Name="COD_GRUPO" ColumnName="COD_GRUPO" />
+                <ScalarProperty Name="ChannelID" ColumnName="ChannelID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="SEQ_PROD_PARAMETRO" ColumnName="SEQ_PROD_PARAMETRO" />
+                <ScalarProperty Name="NOM_CAMPANHA_VENDA" ColumnName="NOM_CAMPANHA_VENDA" />
+                <ScalarProperty Name="DES_CAMPANHA_VENDA" ColumnName="DES_CAMPANHA_VENDA" />
+                <ScalarProperty Name="DTA_INI_VIGENCIA" ColumnName="DTA_INI_VIGENCIA" />
+                <ScalarProperty Name="DTA_FIM_VIGENCIA" ColumnName="DTA_FIM_VIGENCIA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AIC_006_PROD_PARAMETRO">
+            <EntityTypeMapping TypeName="AIC_Config_Model.AIC_006_PROD_PARAMETRO">
+              <MappingFragment StoreEntitySet="AIC_006_PROD_PARAMETRO">
+                <ScalarProperty Name="ChannelID" ColumnName="ChannelID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="SEQ_PROD_PARAMETRO" ColumnName="SEQ_PROD_PARAMETRO" />
+                <ScalarProperty Name="XML_PROD_PARAMETRO" ColumnName="XML_PROD_PARAMETRO" />
+                <ScalarProperty Name="STA_PADRAO" ColumnName="STA_PADRAO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AIC_007_FUNC_INSTITUICAO">
+            <EntityTypeMapping TypeName="AIC_Config_Model.AIC_007_FUNC_INSTITUICAO">
+              <MappingFragment StoreEntitySet="AIC_007_FUNC_INSTITUICAO">
+                <ScalarProperty Name="COD_INSTITUICAO" ColumnName="COD_INSTITUICAO" />
+                <ScalarProperty Name="COD_MATRICULA" ColumnName="COD_MATRICULA" />
+                <ScalarProperty Name="STA_ATIVO" ColumnName="STA_ATIVO" />
+                <ScalarProperty Name="NOM_FUNCIONARIO" ColumnName="NOM_FUNCIONARIO" />
+                <ScalarProperty Name="COD_MATR_PARCEIRO" ColumnName="COD_MATR_PARCEIRO" />
+                <ScalarProperty Name="SIG_UF_FUNCIONARIO" ColumnName="SIG_UF_FUNCIONARIO" />
+                <ScalarProperty Name="DTA_CADASTRO" ColumnName="DTA_CADASTRO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BatchTags">
+            <EntityTypeMapping TypeName="AIC_Config_Model.BatchTag">
+              <MappingFragment StoreEntitySet="BatchTag">
+                <ScalarProperty Name="BatchTagId" ColumnName="BatchTagId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="TypeRecord" ColumnName="TypeRecord" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="OrderVal" ColumnName="OrderVal" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Caches">
+            <EntityTypeMapping TypeName="AIC_Config_Model.Cache">
+              <MappingFragment StoreEntitySet="Cache">
+                <ScalarProperty Name="CacheID" ColumnName="CacheID" />
+                <ScalarProperty Name="CacheOwnerID" ColumnName="CacheOwnerID" />
+                <ScalarProperty Name="CacheName" ColumnName="CacheName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CacheOwners">
+            <EntityTypeMapping TypeName="AIC_Config_Model.CacheOwner">
+              <MappingFragment StoreEntitySet="CacheOwner">
+                <ScalarProperty Name="CacheOwnerID" ColumnName="CacheOwnerID" />
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CacheStorages">
+            <EntityTypeMapping TypeName="AIC_Config_Model.CacheStorage">
+              <MappingFragment StoreEntitySet="CacheStorage">
+                <ScalarProperty Name="CacheStorageID" ColumnName="CacheStorageID" />
+                <ScalarProperty Name="CacheID" ColumnName="CacheID" />
+                <ScalarProperty Name="Method" ColumnName="Method" />
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+                <ScalarProperty Name="Timer" ColumnName="Timer" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Channels">
+            <EntityTypeMapping TypeName="AIC_Config_Model.Channel">
+              <MappingFragment StoreEntitySet="Channels">
+                <ScalarProperty Name="ChannelID" ColumnName="ChannelID" />
+                <ScalarProperty Name="ChannelName" ColumnName="ChannelName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChannelSteps">
+            <EntityTypeMapping TypeName="AIC_Config_Model.ChannelStep">
+              <MappingFragment StoreEntitySet="ChannelSteps">
+                <ScalarProperty Name="ChannelStepID" ColumnName="ChannelStepID" />
+                <ScalarProperty Name="ChannelID" ColumnName="ChannelID" />
+                <ScalarProperty Name="StepID" ColumnName="StepID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Fields">
+            <EntityTypeMapping TypeName="AIC_Config_Model.Field">
+              <MappingFragment StoreEntitySet="Fields">
+                <ScalarProperty Name="FieldID" ColumnName="FieldID" />
+                <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+                <ScalarProperty Name="FieldSystemName" ColumnName="FieldSystemName" />
+                <ScalarProperty Name="FieldStatus" ColumnName="FieldStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FlowRules">
+            <EntityTypeMapping TypeName="AIC_Config_Model.FlowRule">
+              <MappingFragment StoreEntitySet="FlowRules">
+                <ScalarProperty Name="FlowID" ColumnName="FlowID" />
+                <ScalarProperty Name="RuleID" ColumnName="RuleID" />
+                <ScalarProperty Name="FlowRuleID" ColumnName="FlowRuleID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Flows">
+            <EntityTypeMapping TypeName="AIC_Config_Model.Flow">
+              <MappingFragment StoreEntitySet="Flows">
+                <ScalarProperty Name="FlowID" ColumnName="FlowID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ChannelStepID" ColumnName="ChannelStepID" />
+                <ScalarProperty Name="StepNumber" ColumnName="StepNumber" />
+                <ScalarProperty Name="Fails" ColumnName="Fails" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Histories">
+            <EntityTypeMapping TypeName="AIC_Config_Model.History">
+              <MappingFragment StoreEntitySet="History">
+                <ScalarProperty Name="SourceID" ColumnName="SourceID" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Jobs">
+            <EntityTypeMapping TypeName="AIC_Config_Model.Job">
+              <MappingFragment StoreEntitySet="Jobs">
+                <ScalarProperty Name="JobID" ColumnName="JobID" />
+                <ScalarProperty Name="JobName" ColumnName="JobName" />
+                <ScalarProperty Name="Schedule" ColumnName="Schedule" />
+                <ScalarProperty Name="Recurring" ColumnName="Recurring" />
+                <ScalarProperty Name="RecursEvery" ColumnName="RecursEvery" />
+                <ScalarProperty Name="OccursOnceAt" ColumnName="OccursOnceAt" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="HasEndDate" ColumnName="HasEndDate" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JobStatistics">
+            <EntityTypeMapping TypeName="AIC_Config_Model.JobStatistic">
+              <MappingFragment StoreEntitySet="JobStatistics">
+                <ScalarProperty Name="JobStatId" ColumnName="JobStatId" />
+                <ScalarProperty Name="JobId" ColumnName="JobId" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="JobStatistics" ColumnName="JobStatistics" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Legacies">
+            <EntityTypeMapping TypeName="AIC_Config_Model.Legacy">
+              <MappingFragment StoreEntitySet="Legacies">
+                <ScalarProperty Name="LegacyID" ColumnName="LegacyID" />
+                <ScalarProperty Name="LegacyName" ColumnName="LegacyName" />
+                <ScalarProperty Name="LegacySystemName" ColumnName="LegacySystemName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LegacyCodes">
+            <EntityTypeMapping TypeName="AIC_Config_Model.LegacyCode">
+              <MappingFragment StoreEntitySet="LegacyCodes">
+                <ScalarProperty Name="LegacyCodeID" ColumnName="LegacyCodeID" />
+                <ScalarProperty Name="LegacyID" ColumnName="LegacyID" />
+                <ScalarProperty Name="LegacyCode1" ColumnName="LegacyCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LegacyValues">
+            <EntityTypeMapping TypeName="AIC_Config_Model.LegacyValue">
+              <MappingFragment StoreEntitySet="LegacyValues">
+                <ScalarProperty Name="LegacyCodeID" ColumnName="LegacyCodeID" />
+                <ScalarProperty Name="SourceID" ColumnName="SourceID" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MediaSets">
+            <EntityTypeMapping TypeName="AIC_Config_Model.MediaSet">
+              <MappingFragment StoreEntitySet="MediaSet">
+                <ScalarProperty Name="Media_id" ColumnName="Media_id" />
+                <ScalarProperty Name="file_name" ColumnName="file_name" />
+                <ScalarProperty Name="content_type" ColumnName="content_type" />
+                <ScalarProperty Name="content_coding" ColumnName="content_coding" />
+                <ScalarProperty Name="content" ColumnName="content" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductMedias">
+            <EntityTypeMapping TypeName="AIC_Config_Model.ProductMedia">
+              <MappingFragment StoreEntitySet="ProductMedia">
+                <ScalarProperty Name="ProductMediaId" ColumnName="ProductMediaId" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="Media_id" ColumnName="Media_id" />
+                <ScalarProperty Name="FieldsMap" ColumnName="FieldsMap" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="AIC_Config_Model.Product">
+              <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductSystemName" ColumnName="ProductSystemName" />
+                <ScalarProperty Name="ProductArea" ColumnName="ProductArea" />
+                <ScalarProperty Name="ProductHeader" ColumnName="ProductHeader" />
+                <ScalarProperty Name="BusinessUnitID" ColumnName="BusinessUnitID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rules">
+            <EntityTypeMapping TypeName="AIC_Config_Model.Rule">
+              <MappingFragment StoreEntitySet="Rules">
+                <ScalarProperty Name="RuleID" ColumnName="RuleID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="Expression" ColumnName="Expression" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Expires" ColumnName="Expires" />
+                <ScalarProperty Name="RuleException" ColumnName="RuleException" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Steps">
+            <EntityTypeMapping TypeName="AIC_Config_Model.Step">
+              <MappingFragment StoreEntitySet="Steps">
+                <ScalarProperty Name="StepID" ColumnName="StepID" />
+                <ScalarProperty Name="StepName" ColumnName="StepName" />
+                <ScalarProperty Name="StepSystemName" ColumnName="StepSystemName" />
+                <ScalarProperty Name="StepStatus" ColumnName="StepStatus" />
+                <ScalarProperty Name="StepType" ColumnName="StepType" />
+                <ScalarProperty Name="StepShared" ColumnName="StepShared" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="AIC_Config_Model.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="AIC_003_GRUPO_VENDA" TypeName="AIC_Config_Model.AIC_003_GRUPO_VENDA" StoreEntitySet="AIC_003_GRUPO_VENDA">
+            <EndProperty Name="AIC_004_GRUPO">
+              <ScalarProperty Name="COD_GRUPO" ColumnName="COD_GRUPO" />
+            </EndProperty>
+            <EndProperty Name="AIC_002_PONTO_VENDA">
+              <ScalarProperty Name="COD_PONTO_VENDA" ColumnName="COD_PONTO_VENDA" />
+              <ScalarProperty Name="COD_INSTITUICAO" ColumnName="COD_INSTITUICAO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="ChannelStepFields" TypeName="AIC_Config_Model.ChannelStepFields" StoreEntitySet="ChannelStepFields">
+            <EndProperty Name="ChannelSteps">
+              <ScalarProperty Name="ChannelStepID" ColumnName="ChannelStepID" />
+            </EndProperty>
+            <EndProperty Name="Fields">
+              <ScalarProperty Name="FieldID" ColumnName="FieldID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="AIC_Config">
+        <EntityTypeShape EntityType="AIC_Config_Model.AIC_001_INSTITUICAO" Width="1.5" PointX="3" PointY="21.75" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.AIC_002_PONTO_VENDA" Width="1.5" PointX="5.25" PointY="0.75" Height="2.3648893229166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.AIC_004_GRUPO" Width="1.5" PointX="3" PointY="3.875" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.AIC_005_PROD_CAMPANHA" Width="1.5" PointX="5.25" PointY="7.5" Height="2.9417936197916656" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.AIC_006_PROD_PARAMETRO" Width="1.5" PointX="3" PointY="7.625" Height="2.5571907552083326" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.AIC_007_FUNC_INSTITUICAO" Width="1.5" PointX="5.25" PointY="21.5" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.BatchTag" Width="1.5" PointX="10.75" PointY="5.5" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.Cache" Width="1.5" PointX="10" PointY="13.875" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.CacheOwner" Width="1.5" PointX="7.75" PointY="14.125" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.CacheStorage" Width="1.5" PointX="12.25" PointY="13.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.Channel" Width="1.5" PointX="0.75" PointY="6" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.ChannelStep" Width="1.5" PointX="6" PointY="3.875" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.Field" Width="1.5" PointX="8.25" PointY="7.625" Height="1.9802864583333397" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.FlowRule" Width="1.5" PointX="5.25" PointY="13" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.Flow" Width="1.5" PointX="3" PointY="11.25" Height="2.5571907552083388" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.History" Width="1.5" PointX="5.75" PointY="16.5" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.Job" Width="1.5" PointX="12.75" PointY="5.5" Height="3.1340950520833379" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.JobStatistic" Width="1.5" PointX="7.75" PointY="17.5" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.Legacy" Width="1.5" PointX="7.75" PointY="10.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.LegacyCode" Width="1.5" PointX="10" PointY="10.625" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.LegacyValue" Width="1.5" PointX="12.25" PointY="10.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.MediaSet" Width="1.5" PointX="9.75" PointY="17.5" Height="1.9802864583333282" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.ProductMedia" Width="1.5" PointX="11.75" PointY="17.5" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.Product" Width="1.5" PointX="0.75" PointY="9.5" Height="2.7494921875000102" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.Rule" Width="1.5" PointX="3" PointY="14.5" Height="2.7494921875000102" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.Step" Width="1.5" PointX="3.75" PointY="18" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AIC_Config_Model.sysdiagram" Width="1.5" PointX="0.75" PointY="18.5" Height="1.9802864583333246" IsExpanded="true" />
+        <AssociationConnector Association="AIC_Config_Model.AIC002F1" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="22.8362939453125" />
+          <ConnectorPoint PointX="5" PointY="22.8362939453125" />
+          <ConnectorPoint PointX="5" PointY="21.25" />
+          <ConnectorPoint PointX="5.5" PointY="21.25" />
+          <ConnectorPoint PointX="5.5" PointY="15.614889322916667" />
+          <ConnectorPoint PointX="5" PointY="15.614889322916667" />
+          <ConnectorPoint PointX="5" PointY="3.4898893229166656" />
+          <ConnectorPoint PointX="6" PointY="3.4898893229166656" />
+          <ConnectorPoint PointX="6" PointY="3.1148893229166656" />
+        </AssociationConnector>
+        <AssociationConnector Association="AIC_Config_Model.RefAIC_001_INSTITUICAO461" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="22.230646972656253" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="22.230646972656253" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="22.230646972656253" />
+          <ConnectorPoint PointX="5.25" PointY="22.230646972656253" />
+        </AssociationConnector>
+        <AssociationConnector Association="AIC_Config_Model.AIC005F2" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="6.047587890625" />
+          <ConnectorPoint PointX="4.875" PointY="6.422587890625" />
+          <ConnectorPoint PointX="4.875" PointY="8.9708968098958337" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="8.9708968098958337" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="8.9708968098958337" />
+          <ConnectorPoint PointX="5.25" PointY="8.9708968098958337" />
+        </AssociationConnector>
+        <AssociationConnector Association="AIC_Config_Model.AIC005F1" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="8.2354484049479169" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="8.2354484049479151" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="8.2354484049479169" />
+          <ConnectorPoint PointX="5.25" PointY="8.2354484049479169" />
+        </AssociationConnector>
+        <AssociationConnector Association="AIC_Config_Model.AIC006F1" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="9.8410953776041659" />
+          <ConnectorPoint PointX="3" PointY="9.8410953776041659" />
+        </AssociationConnector>
+        <AssociationConnector Association="AIC_Config_Model.AIC006F2" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="7.7879850260416674" />
+          <ConnectorPoint PointX="2.625" PointY="8.1629850260416674" />
+          <ConnectorPoint PointX="2.625" PointY="7.25" />
+          <ConnectorPoint PointX="3" PointY="7.625" />
+        </AssociationConnector>
+        <AssociationConnector Association="AIC_Config_Model.FK_Cache_CacheOwner" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.25" PointY="14.922841796875" />
+          <ConnectorPoint PointX="10" PointY="14.922841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="AIC_Config_Model.FK_CacheStorage_Cache" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.5" PointY="14.865143229166666" />
+          <ConnectorPoint PointX="12.25" PointY="14.865143229166666" />
+        </AssociationConnector>
+        <AssociationConnector Association="AIC_Config_Model.FK_ChannelSteps_Channels" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="6.7737964453125006" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="6.7737964453125" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="6.7737964453125006" />
+          <ConnectorPoint PointX="7.15625" PointY="6.7737964453125006" />
+          <ConnectorPoint PointX="7.15625" PointY="6.0475878906250031" />
+        </AssociationConnector>
+        <AssociationConnector Association="AIC_Config_Model.FK_ChannelSteps_Steps" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="19.357687174479167" />
+          <ConnectorPoint PointX="5.416666666666667" PointY="19.357687174479167" />
+          <ConnectorPoint PointX="5.583333333333333" PointY="19.357687174479167" />
+          <ConnectorPoint PointX="7.40625" PointY="19.357687174479167" />
+          <ConnectorPoint PointX="7.40625" PointY="6.0475878906250031" />
+        </AssociationConnector>
+        <AssociationConnector Association="AIC_Config_Model.FK_FlowRules_Flows" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="13.403595377604169" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="13.403595377604169" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="13.403595377604169" />
+          <ConnectorPoint PointX="5.25" PointY="13.403595377604169" />
+        </AssociationConnector>
+        <AssociationConnector Association="AIC_Config_Model.FK_FlowRules_Flows1" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="13.139297688802085" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="13.139297688802085" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="13.139297688802085" />
+          <ConnectorPoint PointX="5.25" PointY="13.139297688802085" />
+        </AssociationConnector>
+        <AssociationConnector Association="AIC_Config_Model.FK_FlowRules_Rules" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="14.932444661458334" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="14.932444661458334" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="14.932444661458334" />
+          <ConnectorPoint PointX="5.25" PointY="14.932444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="AIC_Config_Model.FK_FlowRules_Rules1" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="14.653722330729167" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="14.653722330729167" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="14.653722330729167" />
+          <ConnectorPoint PointX="5.25" PointY="14.653722330729167" />
+        </AssociationConnector>
+        <AssociationConnector Association="AIC_Config_Model.FK_Flows_Products" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="11.749746093750005" />
+          <ConnectorPoint PointX="3" PointY="11.749746093750005" />
+        </AssociationConnector>
+        <AssociationConnector Association="AIC_Config_Model.FK_LegacyCodes_Legacies1" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.25" PointY="11.643992513020834" />
+          <ConnectorPoint PointX="10" PointY="11.643992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="AIC_Config_Model.FK_LegacyValues_LegacyCodes" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.5" PointY="11.643992513020834" />
+          <ConnectorPoint PointX="12.25" PointY="11.643992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="AIC_Config_Model.FK_Rules_Products" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="12.24949218750001" />
+          <ConnectorPoint PointX="1.5" PointY="15.874746093750005" />
+          <ConnectorPoint PointX="3" PointY="15.874746093750005" />
+        </AssociationConnector>
+        <AssociationConnector Association="AIC_Config_Model.AIC_003_GRUPO_VENDA" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.75" PointY="3.875" />
+          <ConnectorPoint PointX="3.75" PointY="1.9324446614583328" />
+          <ConnectorPoint PointX="5.25" PointY="1.9324446614583328" />
+        </AssociationConnector>
+        <AssociationConnector Association="AIC_Config_Model.ChannelStepFields" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="4.9612939453125016" />
+          <ConnectorPoint PointX="9" PointY="4.9612939453125016" />
+          <ConnectorPoint PointX="9" PointY="7.625" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

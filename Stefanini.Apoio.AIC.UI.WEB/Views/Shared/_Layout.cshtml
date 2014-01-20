@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <h1>Apoio AIC</h1>
+    <ul>
+        <li>Dicon
+            <ul>
+                <li><a href="@Url.Action("Proposta", "Dicon")">Gerar Proposta</a> </li>
+            </ul>
+        </li>
+    </ul>
+    @RenderBody()
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
