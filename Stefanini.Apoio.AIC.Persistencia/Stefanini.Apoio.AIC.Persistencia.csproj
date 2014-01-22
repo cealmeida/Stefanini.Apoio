@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Class\ReportDataSource.cs" />
     <Compile Include="Interface\IFacilAPRepositorio.cs" />
+    <Compile Include="Interface\IVidaEmpresarialRepositorio.cs" />
     <Compile Include="Model\AIC_Config.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -55,6 +56,7 @@
     <Compile Include="Repositorio\DiconRepositorio.cs" />
     <Compile Include="Repositorio\RepositorioBase.cs" />
     <Compile Include="Repositorio\FacilAPRepositorio.cs" />
+    <Compile Include="Repositorio\VidaEmpresarialRepositorio.cs" />
     <Compile Include="xsd\ConsorcioSchema.Designer.cs">
       <DependentUpon>ConsorcioSchema.xsd</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -64,6 +66,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>facilAPSchema.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="xsd\VidaEmpresarialSchema.cs">
+      <DependentUpon>VidaEmpresarialSchema.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="xsd\VidaEmpresarialSchema.designer.cs">
+      <DependentUpon>VidaEmpresarialSchema.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +100,13 @@
     </None>
     <None Include="xsd\facilAPSchema.xss">
       <DependentUpon>facilAPSchema.xsd</DependentUpon>
+    </None>
+    <None Include="xsd\VidaEmpresarialSchema.xsc">
+      <DependentUpon>VidaEmpresarialSchema.xsd</DependentUpon>
+    </None>
+    <None Include="xsd\VidaEmpresarialSchema.xsd" />
+    <None Include="xsd\VidaEmpresarialSchema.xss">
+      <DependentUpon>VidaEmpresarialSchema.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup />

@@ -3,9 +3,9 @@ using System.Text;
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
-using Stefanini.Apoio.AIC.Persistencia.Class;
 using Stefanini.Apoio.AIC.Persistencia.xsd;
 using System.Data;
+using Stefanini.Apoio.AIC.Persistencia;
 
 
 namespace Stefanini.Apoio.AIC.Repositorio

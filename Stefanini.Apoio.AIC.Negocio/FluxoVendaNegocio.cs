@@ -8,7 +8,7 @@ using Stefanini.Apoio.AIC.Negocio.DataTransport;
 
 namespace Stefanini.Apoio.AIC.Negocio
 {
-    public class FluxoVendaNegocio : IFluxoVendaNegocio, IFluxoVendaAPrazo
+    public class FluxoVendaNegocio : IFluxoVendaNegocio
     {
 
         public string GeraScriptSqlInsert(Model.FluxoVendaModel fluxoVenda)
@@ -54,9 +54,6 @@ namespace Stefanini.Apoio.AIC.Negocio
 
        
 
-        public void FluxoPraxo()
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

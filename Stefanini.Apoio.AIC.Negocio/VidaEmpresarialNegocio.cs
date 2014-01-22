@@ -4,23 +4,25 @@ using System.Linq;
 using System.Text;
 using Stefanini.Apoio.AIC.Persistencia.Repositorio;
 using System.IO;
+using Stefanini.Apoio.AIC.Negocio;
+using Stefanini.Apoio.AIC.Negocio.Interface;
 using Stefanini.Apoio.AIC.Persistencia.Interface;
 using Stefanini.Apoio.AIC.Negocio.Patterns.Builders;
 
-namespace Stefanini.Apoio.AIC.Persistencia
+namespace Stefanini.Apoio.AIC.Negocio
 {
-    public class DiconNegocio:IDiconNegocio
+    public class VidaEmpresarialNegocio : IVidaEmpresarialNegocio
     {
-        private IDiconRepositorio repositorio;
+        private IVidaEmpresarialRepositorio repositorio;
 
-        private IDiconRepositorio Repositorio
+        private IVidaEmpresarialRepositorio Repositorio
         {
             get
             {
 
                 if (this.repositorio == null)
                 {
-                    this.repositorio = new DiconRepositorio();
+                    this.repositorio = new VidaEmpresarialRepositorio();
                 }
 
                 return this.repositorio;
@@ -32,9 +34,13 @@ namespace Stefanini.Apoio.AIC.Persistencia
             byte[] arquivoPDF = null;
 
             Stream sm = new CrystalReportBuilder()
-                                .ComArquivo(Path.Combine(@"C:\Users\zbraga\Documents\Visual Studio 2010\Projects\Stefanini.Apoio.AIC\Stefanini.Apoio.AIC.Negocio\rpt", "Consorcio.rpt"))
-                                .ComDataSoucer(this.Repositorio.MontaDataSourceDicon())
+                                .ComArquivo(Path.Combine(@"C:\Users\manasciomento\Desktop\qualquer coisa\Stefanini.Apoio.AIC\Stefanini.Apoio.AIC.Negocio\rpt", "VidaEmpresarial.rpt"))
+                                .ComDataSoucer(this.Repositorio.MontaReportDataSource())
+                                .ComParametro("iptTipoPagamento", "4")
+                                .ComParametro("Pm-Comando.id_via", 1)
                                 .Constroi().ExportToStream(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat);
+
+
 
             using (MemoryStream ms = new MemoryStream())
             {

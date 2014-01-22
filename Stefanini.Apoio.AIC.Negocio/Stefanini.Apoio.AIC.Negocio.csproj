@@ -57,6 +57,7 @@
     <Compile Include="Enumerados\EnSexo.cs" />
     <Compile Include="Extension\ObjectExtension.cs" />
     <Compile Include="Interface\IScriptSQL.cs" />
+    <Compile Include="Interface\IVidaEmpresarialNegocio.cs" />
     <Compile Include="Model\FluxoVendaModel.cs" />
     <Compile Include="DataTransport\ProductsTO.cs" />
     <Compile Include="DataTransport\RulesTO.cs" />
@@ -85,7 +86,7 @@
     <Compile Include="Patterns\QueryObject\SqlSelect.cs" />
     <Compile Include="Patterns\QueryObject\SqlUpdate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Builder\CrystalReport.cs" />
+    <Compile Include="Patterns\Builders\CrystalReportBuilder.cs" />
     <Compile Include="rpt\Consorcio.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -98,6 +99,13 @@
       <DependentUpon>subQuadroResumo_part1.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rpt\VidaEmpresarial1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VidaEmpresarial.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VidaEmpresarialNegocio.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Stefanini.Apoio.AIC.Persistencia\Stefanini.Apoio.AIC.Persistencia.csproj">
@@ -113,6 +121,10 @@
     <EmbeddedResource Include="rpt\subQuadroResumo_part1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>subQuadroResumo_part1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt\VidaEmpresarial.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>VidaEmpresarial1.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
