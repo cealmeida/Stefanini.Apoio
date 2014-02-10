@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
@@ -44,18 +45,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\ReportDataSource.cs" />
+    <Compile Include="Interface\IConsulta.cs" />
     <Compile Include="Interface\IFacilAPRepositorio.cs" />
+    <Compile Include="Interface\IProductsRepositorio.cs" />
+    <Compile Include="Interface\IScriptRepositorio.cs" />
     <Compile Include="Interface\IVidaEmpresarialRepositorio.cs" />
-    <Compile Include="Model\AIC_Config.Designer.cs">
+    <Compile Include="Interface\IDiconRepositorio.cs" />
+    <Compile Include="Model\AICConfig.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AIC_Config.edmx</DependentUpon>
+      <DependentUpon>AICConfig.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Interface\IDiconRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio\DiconRepositorio.cs" />
-    <Compile Include="Repositorio\RepositorioBase.cs" />
+    <Compile Include="Repositorio\ProductsRepositorio.cs" />
     <Compile Include="Repositorio\FacilAPRepositorio.cs" />
+    <Compile Include="Repositorio\ScriptRepositorio.cs" />
     <Compile Include="Repositorio\VidaEmpresarialRepositorio.cs" />
     <Compile Include="xsd\ConsorcioSchema.Designer.cs">
       <DependentUpon>ConsorcioSchema.xsd</DependentUpon>
@@ -76,11 +81,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Model\AIC_Config.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>AIC_Config.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <None Include="App.Config" />
+    <EntityDeploy Include="Model\AICConfig.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AICConfig.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="packages.config" />
     <None Include="xsd\ConsorcioSchema.xsc">
       <DependentUpon>ConsorcioSchema.xsd</DependentUpon>
     </None>

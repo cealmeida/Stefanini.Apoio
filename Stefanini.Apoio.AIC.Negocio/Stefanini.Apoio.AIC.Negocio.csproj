@@ -56,6 +56,8 @@
     <Compile Include="DataTransport\FlowsTO.cs" />
     <Compile Include="Enumerados\EnSexo.cs" />
     <Compile Include="Extension\ObjectExtension.cs" />
+    <Compile Include="Interface\IProductsNegocio.cs" />
+    <Compile Include="Interface\IScriptNegocio.cs" />
     <Compile Include="Interface\IScriptSQL.cs" />
     <Compile Include="Interface\IVidaEmpresarialNegocio.cs" />
     <Compile Include="Model\FluxoVendaModel.cs" />
@@ -85,6 +87,7 @@
     <Compile Include="Patterns\QueryObject\SqlInstruction.cs" />
     <Compile Include="Patterns\QueryObject\SqlSelect.cs" />
     <Compile Include="Patterns\QueryObject\SqlUpdate.cs" />
+    <Compile Include="ProductsNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Patterns\Builders\CrystalReportBuilder.cs" />
     <Compile Include="rpt\Consorcio.cs">
@@ -105,6 +108,7 @@
       <DependentUpon>VidaEmpresarial.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ScriptNegocio.cs" />
     <Compile Include="VidaEmpresarialNegocio.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>
+    Execução de Scripts</h2>
+<form action="@Url.Action("Run", "Script")" method="post" enctype="multipart/form-data">
+<label for="txtDiretorio">
+    Diretório:</label><br />
+<input type="text" name="txtDiretorio" id="txtDiretorio" value="C:\CXS_AIC_NEW_TFS\AIC\01.Banco\" />
+<input type="submit" value="Executar" />
+</form>
+<div>
+    <h2>
+        Resultado</h2>
+    @{
+        if (ViewBag.Resultado != null)
+        {
+            
+            foreach (var r in ViewBag.Resultado)
+            {
+                <div style="border:solid 1px">
+                    <h3>@r.Key</h3>
+                    <p>@r.Value</p>
+                </div>
+            }
+        } 
+    }
+</div>
